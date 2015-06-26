@@ -23,10 +23,10 @@ void merge_sort(vector<Elemento>&le, vector<Elemento>&ri, vector<Elemento>&lista
     int i=0;
     int j=0;
     int k=0;
-//    cout<<i<<" <-";
+
     while(i<le.size() && j<nr)
     {
-
+	//criterio de seleccion 
        /* if(le[i].valor>=ri[j].valor)*/ if(le[i].peso<= ri[j].peso)
         {
             lista[k].valor =le[i].valor;
@@ -38,11 +38,11 @@ void merge_sort(vector<Elemento>&le, vector<Elemento>&ri, vector<Elemento>&lista
             {
              lista[k].valor = ri[j].valor;
              lista[k].peso = ri[j].peso;
-       //      cout<<"falso"<<" ";
+
              j++;
             }
         k++;
-        //cout<<"aumento k"<<endl;
+
     }
     while(i<nl)
     {
@@ -131,7 +131,7 @@ int mochila_solucion()
     unsigned int valor_total=0;
     for(int i=0; i<Ve.size(); i++)
     {
-        if(rpt+Ve[i].peso<peso_mochila)
+        if(rpt+Ve[i].peso<peso_mochila)//criterio goloso
         {
             rpt+=Ve[i].peso;
             valor_total+= Ve[i].valor;
