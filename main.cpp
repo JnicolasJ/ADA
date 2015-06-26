@@ -106,19 +106,19 @@ void datos()
         //cout<<el.valor<<" "<<el.peso<<endl;
         Ve.push_back(el);
     }
-    /*
+    /*verificacion de ordenamiento
     for(int i=0; i<Ve.size(); i++)
     {
         cout<<Ve[i].valor<<" "<<Ve[i].peso<<endl;
     }
-*/
-    merge_sort(Ve);
+
+    merge_sort(Ve);//ordenamiento
 
      for(int i=0; i<Ve.size(); i++)
     {
         cout<<Ve[i].valor<<" "<<Ve[i].peso<<endl;
     }
-
+	*/
     archivo.close();
 
 }
